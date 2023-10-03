@@ -1,4 +1,4 @@
-#include "Doctor.h"
+ï»¿#include "Doctor.h"
 #include "Person.h"
 
 using namespace std;
@@ -22,19 +22,19 @@ void Doctor::Input() {
 
 	char log;
 
-	cout << "Ââåäèòå êîë-âî ñïåöèàëüíîñòåé: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»-Ð²Ð¾ ÑÐ¿ÐµÑ†Ð¸Ð°Ð»ÑŒÐ½Ð¾ÑÑ‚ÐµÐ¹: ";
 	cin >> numberOfSpecialties;
 
 	for (int i = 0; i < numberOfSpecialties; i++) {
-		cout << i + 1 << ". Ââåäèòå ñïåöèàëüíîñòü: " << endl;
+		cout << i + 1 << ". Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ¿ÐµÑ†Ð¸Ð°Ð»ÑŒÐ½Ð¾ÑÑ‚ÑŒ: " << endl;
 		cin >> speciality[i];
 	}
 
-	cout << "Ââåäèòå îïûò ðàáîòû: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾Ð¿Ñ‹Ñ‚ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹: ";
 	cin >> experience;
 
 	do {
-		cout << "Âû ñåìåéíûé âðà÷? (y - äà, n - íåò)\n> ";
+		cout << "Ð’Ñ‹ ÑÐµÐ¼ÐµÐ¹Ð½Ñ‹Ð¹ Ð²Ñ€Ð°Ñ‡? (y - Ð´Ð°, n - Ð½ÐµÑ‚)\n> ";
 		cin >> log;
 
 		if (log == 'y')
@@ -42,17 +42,17 @@ void Doctor::Input() {
 		else if (log == 'n')
 			familyDoctor = false;
 		else
-			cout << "Âû ââåëè íåâåðíûé ñèìâîë!" << endl << endl;
+			cout << "Ð’Ñ‹ Ð²Ð²ÐµÐ»Ð¸ Ð½ÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ ÑÐ¸Ð¼Ð²Ð¾Ð»!" << endl << endl;
 	} while (log != 'y' && log != 'n');
 }
 void Doctor::Print() {
 	Person::Print();
 
-	cout << "Ñïåöèàëüíîñòè: " << endl;
+	cout << "Ð¡Ð¿ÐµÑ†Ð¸Ð°Ð»ÑŒÐ½Ð¾ÑÑ‚Ð¸: " << endl;
 	for (int i = 0; i < numberOfSpecialties; i++)
 		cout << speciality[i] << endl;
 	cout << endl;
 
-	cout << "Ñòàæ ðàáîòû: " << experience << endl;
-	printf("Ñåìåéíûé äîêòîð: %s\n", familyDoctor == true ? "äà" : "íåò");
+	cout << "Ð¡Ñ‚Ð°Ð¶ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹: " << experience << endl;
+	printf("Ð¡ÐµÐ¼ÐµÐ¹Ð½Ñ‹Ð¹ Ð´Ð¾ÐºÑ‚Ð¾Ñ€: %s\n", familyDoctor == true ? "Ð´Ð°" : "Ð½ÐµÑ‚");
 }

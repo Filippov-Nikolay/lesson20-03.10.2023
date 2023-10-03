@@ -1,4 +1,4 @@
-#include "Driver.h"
+ï»¿#include "Driver.h"
 
 using namespace std;
 
@@ -15,19 +15,19 @@ void Driver::Input(string notc, int ps, int pID) {
 	passportSeries = ps;
 	passportID = pID;
 
-	/*cout << "Ââåäèòå íîìåð ìàøèíû: ";
+	/*cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð¼Ð°ÑˆÐ¸Ð½Ñ‹: ";
 	cin >> numberOfTheCar;
 
-	cout << "Ââåäèòå ñåðèþ âîä. ïðàâ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐµÑ€Ð¸ÑŽ Ð²Ð¾Ð´. Ð¿Ñ€Ð°Ð²: ";
 	cin >> passportSeries;
 
-	cout << "Ââåäèòå ID âîä. ïðàâ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ID Ð²Ð¾Ð´. Ð¿Ñ€Ð°Ð²: ";
 	cin >> passportID;*/
 }
 void Driver::Print() {
 	Person::Print();
 
-	cout << "Íîìåð ìàøèíû: " << numberOfTheCar << endl;
-	cout << "Ñåðèÿ âîä. ïðàâ: " << passportSeries << endl;
-	cout << "ID âîä. ïðàâ: " << passportID << endl;
+	cout << "ÐÐ¾Ð¼ÐµÑ€ Ð¼Ð°ÑˆÐ¸Ð½Ñ‹: " << numberOfTheCar << endl;
+	cout << "Ð¡ÐµÑ€Ð¸Ñ Ð²Ð¾Ð´. Ð¿Ñ€Ð°Ð²: " << passportSeries << endl;
+	cout << "ID Ð²Ð¾Ð´. Ð¿Ñ€Ð°Ð²: " << passportID << endl;
 }

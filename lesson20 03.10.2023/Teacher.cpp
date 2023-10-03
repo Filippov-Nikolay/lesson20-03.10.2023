@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include "Teacher.h"
 
 using namespace std;
@@ -25,26 +25,26 @@ void Teacher::Input() {
 
 	char temp[200];
 
-	cout << "Ââåäèòå íàçâàíèå øêîëû: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ ÑˆÐºÐ¾Ð»Ñ‹: ";
 	cin >> temp;
 
 	school = new char[strlen(temp) + 1];
 	strcpy_s(school, strlen(temp) + 1, temp);
 
-	cout << "Ââåäèòå ÇÏ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð—ÐŸ: ";
 	cin >> salary;
 
 	for (int i = 0; i < numberOfItems; i++)
 		if (items[i] != nullptr)
 			delete[] items[i];
 
-	cout << "Ââåäèòå êîë-âî ïðåäìåòîâ êîòîðûõ âû çíàåòå: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»-Ð²Ð¾ Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚Ð¾Ð² ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ñ… Ð²Ñ‹ Ð·Ð½Ð°ÐµÑ‚Ðµ: ";
 	cin >> numberOfItems;
 
 	items = new char* [numberOfItems];
 
 	for (int i = 0; i < numberOfItems; i++) {
-		cout << "Ââåäèòå ïðåäìåò: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚: ";
 		cin >> temp;
 
 		items[i] = new char[strlen(temp) + 1];
@@ -53,7 +53,7 @@ void Teacher::Input() {
 }
 void Teacher::Print() {
 	Person::Print();
-	cout << "Øêîëà: " << school << ", çàðïëàòà: " << salary << ", ïðåäìåòû:" << endl;
+	cout << "Ð¨ÐºÐ¾Ð»Ð°: " << school << ", Ð·Ð°Ñ€Ð¿Ð»Ð°Ñ‚Ð°: " << salary << ", Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚Ñ‹:" << endl;
 	for (int i = 0; i < numberOfItems; i++) {
 		cout << items[i] << endl;
 	}
